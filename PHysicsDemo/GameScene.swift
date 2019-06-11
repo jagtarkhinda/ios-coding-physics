@@ -26,8 +26,16 @@ class GameScene: SKScene {
         
         //see slides (intro to physics)
         //adding physics body by coding
-        circle.physicsBody(
         
+        //circle hitbox
+        circle.physicsBody = SKPhysicsBody(circleOfRadius: 35)
+        circle.physicsBody?.affectedByGravity = false;
+        circle.physicsBody?.isDynamic = false
+        
+        //rectangle hitbox
+        square.physicsBody = SKPhysicsBody(rectangleOf: square.size)
+        square.physicsBody?.affectedByGravity = false;
+        square.physicsBody?.isDynamic = false
         
         addChild(circle)
         addChild(square)
